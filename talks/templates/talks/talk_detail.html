@@ -1,0 +1,24 @@
+{% extends "_layouts/base.html" %}
+
+{% block title %}{{ object.name }} | Talks | {{ block.super }}{% endblock title %}
+
+{% block headline %}
+<h1>{{ object.name }}</h1>
+<h2>
+    <span class="text-primary">{{ object.host }}</span>
+    <strong>at {{ object.when }}</strong>
+    in <span class="text-info">Room {{ object.room }}</span>
+</h2>
+{% endblock headline %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-8">
+        </div>
+        <div class="col-sm-4">
+            <p><a href="{{ object.talk_list.get_absolute_url }}">Back to list</a></p>
+        </div>
+    </div>
+
+{% endblock content %}
