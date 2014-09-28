@@ -28,7 +28,6 @@ class TalkListForm(forms.ModelForm):
                         css_class='btn-primary')
                     )
                 )
-        print(self.layout)
 
 class TalkForm(forms.ModelForm):
     class Meta:
