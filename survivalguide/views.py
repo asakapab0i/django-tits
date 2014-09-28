@@ -33,6 +33,7 @@ class LoginView(views.AnonymousRequiredMixin,
     form_class = LoginForm
     success_url = reverse_lazy('home')
     template_name = 'accounts/login.html'
+    form_invalid_message = ''
 
     def form_valid(self, form):
         username = form.cleaned_data['username']
